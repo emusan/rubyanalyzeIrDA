@@ -19,3 +19,5 @@ ARGV.each_with_index do |csv_file,index|
 end
 
 puts "We have #{waveforms.length} waveforms to analyze"
+
+puts waveforms[0].timenthone(3) if waveforms[0].timenthone(3)
