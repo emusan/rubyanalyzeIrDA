@@ -8,7 +8,7 @@ puts ARGV.length
 ARGV.each_with_index do |csv_file,index|
 	STDERR.puts "Processing #{csv_file}"
 
-	tempname = csv_file.scan(/.*\/([^\..*]+)/).first.last
+	tempname = csv_file.scan(/.*\/([^.{4}$]+)/).first.last
 	temptime = []
 	tempstate = []
 	CSV.foreach(csv_file,headers: true) do |row|
@@ -20,8 +20,4 @@ ARGV.each_with_index do |csv_file,index|
 end
 
 puts "We have #{waveforms.length} waveforms to analyze"
-puts "Waveform 0,1,2, are called:"
-
-for i in 0..2
-	puts waveforms[i].name
-end
+puts waveforms[0].name
