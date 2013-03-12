@@ -1,6 +1,7 @@
 class Waveform
-	attr_reader :state,:time
-	def initialize(time,state)
+	attr_reader :name
+	def initialize(name,time,state)
+		@name = name
 		@time = time
 		@state = state
 	end
@@ -9,8 +10,12 @@ class Waveform
 		counter = 0
 		for i in 0...@state.length
 			counter += 1 if @state[i] == "1"
-			return @time[i] if counter == n
+			return @time[i].to_i if counter == n
 		end
 		false
+	end
+
+	def deltamn(m,n)
+		timenthone(n) - timenthone(m)
 	end
 end
