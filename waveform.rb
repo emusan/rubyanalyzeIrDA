@@ -18,4 +18,16 @@ class Waveform
 	def deltamn(m,n)
 		timenthone(n) - timenthone(m)
 	end
+
+	def to_binary
+
+	end
+
+	def numones()
+		counter = 0
+		for i in 0...@state.length
+			counter += 1 if @state[i] == "1"
+		end
+		return counter
+	end
 end
