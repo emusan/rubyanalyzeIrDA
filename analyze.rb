@@ -22,11 +22,12 @@ end
 puts "We have #{waveforms.length} waveforms to analyze"
 puts waveforms[0].name
 
-puts waveforms[0].deltamn(0,1)
-puts waveforms[0].deltamn(1,2)
-puts waveforms[0].deltamn(2,3)
-puts waveforms[0].deltamn(3,4)
-puts waveforms[0].deltamn(4,5)
-puts waveforms[0].deltamn(5,6)
+puts waveforms[0].deltamn(0,1) # 4892
+puts waveforms[0].deltamn(1,2) # 1033
+puts waveforms[0].deltamn(2,3) # 1033
+puts waveforms[0].deltamn(3,4) # 1032
+puts waveforms[0].deltamn(4,5) # 1033
+puts waveforms[0].deltamn(5,6) # 1033
+puts waveforms[0].deltamn(14,15) # 104
 
 puts waveforms[0].numones()
